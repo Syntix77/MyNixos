@@ -27,6 +27,9 @@
 
         self.nixosModules.sddm
         self.nixosModules.hyprland-wm
+        self.nixosModules.fish
+
+        self.nixosModules.fonts
       ];
 
       # Bootloader.

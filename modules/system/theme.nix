@@ -1,4 +1,4 @@
-{ self, inputs, ... }:
+{ inputs, ... }:
 {
   flake.homeModules.theme =
     { pkgs, ... }:
@@ -11,6 +11,7 @@
       ];
       gtk = {
         enable = true;
+        gtk4.theme = null;
         font = {
           name = "JetBrainsMono";
           size = 12;

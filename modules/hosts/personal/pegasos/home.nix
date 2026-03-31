@@ -13,6 +13,10 @@
       self.homeModules.git-cfg
       self.homeModules.zed
       self.homeModules.ghostty
+      self.homeModules.fish
+      self.homeModules.starship
+
+      self.homeModules.yazi
     ];
 
     home.username = "syntix";

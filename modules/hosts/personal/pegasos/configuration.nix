@@ -24,6 +24,10 @@
     {
       imports = [
         self.nixosModules.Pegasos-Hardware
+        self.nixosModules.boot-systemd
+        self.nixosModules.boot-kernel
+
+        self.nixosModules.syntix
 
         self.nixosModules.sddm
         self.nixosModules.hyprland-wm
@@ -31,13 +35,6 @@
 
         self.nixosModules.fonts
       ];
-
-      # Bootloader.
-      boot.loader.systemd-boot.enable = true;
-      boot.loader.efi.canTouchEfiVariables = true;
-
-      # Use latest kernel.
-      boot.kernelPackages = pkgs.linuxPackages_latest;
 
       boot.initrd.luks.devices."luks-00fab94c-e97f-41ae-8949-6c83c72cab2d".device =
         "/dev/disk/by-uuid/00fab94c-e97f-41ae-8949-6c83c72cab2d";
@@ -80,16 +77,6 @@
 
       # Configure console keymap
       console.keyMap = "de";
-
-      # Define a user account. Don't forget to set a password with ‘passwd’.
-      users.users.syntix = {
-        isNormalUser = true;
-        description = "Syntix";
-        extraGroups = [
-          "networkmanager"
-          "wheel"
-        ];
-      };
 
       # List packages installed in system profile. To search, run:
       # $ nix search wget

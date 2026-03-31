@@ -1,5 +1,16 @@
 { self, inputs, ... }:
 {
+  flake.nixosModules.syntix = {
+    users.users.syntix = {
+      isNormalUser = true;
+      description = "Syntix";
+      extraGroups = [
+        "networkmanager"
+        "wheel"
+      ];
+    };
+  };
+
   flake.homeModules.syntix = {
     imports = [
       inputs.noctalia.homeModules.default

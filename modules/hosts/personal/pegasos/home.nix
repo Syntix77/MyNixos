@@ -3,11 +3,16 @@
   flake.homeModules.syntix = {
     imports = [
       inputs.noctalia.homeModules.default
-      self.homeModules.git-cfg
+      inputs.agenix.homeManagerModules.default
+      inputs.nix-colors.homeManagerModules.default
+
       self.homeModules.hyprland-wm
       self.homeModules.noctalia
+      self.homeModules.theme
 
+      self.homeModules.git-cfg
       self.homeModules.zed
+      self.homeModules.ghostty
     ];
 
     home.username = "syntix";

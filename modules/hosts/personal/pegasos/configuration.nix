@@ -6,6 +6,7 @@
     modules = [
       self.nixosModules.Pegasos-Configuration
       inputs.home-manager.nixosModules.home-manager
+      inputs.agenix.nixosModules.default
       {
         home-manager = {
           useGlobalPkgs = true;
@@ -85,7 +86,6 @@
           "networkmanager"
           "wheel"
         ];
-        packages = with pkgs; [ ];
       };
 
       # List packages installed in system profile. To search, run:

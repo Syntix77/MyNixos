@@ -3,7 +3,7 @@
     wayland.windowManager.hyprland.settings = {
 
       "$mainMod" = "SUPER";
-      "$terminal" = "kitty";
+      "$terminal" = "ghostty";
       "$editor" = "zeditor";
       "$fileManager" = "ghostty -e yazi";
       "$launcher" = "noctalia-shell ipc call launcher toggle";

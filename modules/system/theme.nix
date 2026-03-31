@@ -1,7 +1,7 @@
 { self, inputs, ... }:
 {
   flake.homeModules.theme =
-    { pkgs, inputs, ... }:
+    { pkgs, ... }:
     {
       colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
 
